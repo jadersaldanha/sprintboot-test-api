@@ -7,4 +7,6 @@ jobs: # a collection of steps
  
  steps: # a collection of executable commands
  — checkout
- — run: gradle test
+ — run: 
+    name: Running integration tests
+    command: gradle test
