@@ -89,7 +89,7 @@ public class SprintbootTestApiApplicationTest {
 //	}
 	
 	private void clearDb() {
-		//this.planetaRepository.deleteAll();
+		this.planetaRepository.deleteAll();
 	}
 }
 
