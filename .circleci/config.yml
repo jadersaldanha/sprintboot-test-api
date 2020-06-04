@@ -7,8 +7,8 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: Bundle install
-          command: gradle test
+          name: Running integration tests
+          command: gradle bootRun
 
 workflows:
   version: 2
