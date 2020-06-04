@@ -6,6 +6,5 @@ jobs: # a collection of steps
  — image: circleci/openjdk:8-jdk-stretch # …with this image as the primary container; this is where all `steps` will run
  
  steps: # a collection of executable commands
- — checkout # Checkout the code from Github
-:I
+ — checkout
  — run: gradle test
