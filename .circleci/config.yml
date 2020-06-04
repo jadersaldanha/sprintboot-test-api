@@ -1,12 +1,23 @@
-version: 2 # use CircleCI 2.0 #
-jobs: # a collection of steps
- build: # runs not using Workflows must have a `build` job as entry point
- 
- docker: # run the steps with Docker
- — image: circleci/openjdk:8-jdk-stretch # …with this image as the primary container; this is where all `steps` will run
- 
- steps: # a collection of executable commands
- — checkout
- — run: 
-    name: Running integration tests
-    command: gradle test
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+    working_directory: ~/sprintboot-test-api
+    steps:
+      - checkout
+      - run: 
+          name: Bundle install
+          command: gradle test
+
+workflows:
+  version: 2
+  build_and_test:
+#    triggers:
+#      - schedule:
+#          cron: "* 4 * * *"
+#          filters:
+#            branches:
+#              only: master
+    jobs:
+      - build
