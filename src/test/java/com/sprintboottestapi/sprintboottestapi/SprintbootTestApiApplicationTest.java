@@ -37,7 +37,7 @@ public class SprintbootTestApiApplicationTest {
 
 	@Test
 	public void createShouldPersistData() {
-		Product product = new Product("Alderaan", "temperate", 1.2, "mountains");
+		Product product = new Product("Alderaan", "temperaete", 1.2, "mountains");
 		product = this.planetaRepository.save(product);
 
 		assertThat(product.getId()).isNotNull();
@@ -89,7 +89,7 @@ public class SprintbootTestApiApplicationTest {
 //	}
 	
 	private void clearDb() {
-		this.planetaRepository.deleteAll();
+		//this.planetaRepository.deleteAll();
 	}
 }
 
