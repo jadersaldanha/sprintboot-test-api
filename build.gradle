@@ -16,7 +16,7 @@ apply plugin: 'org.springframework.boot'
 
 group = 'com.sprintboot-test-api'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = 1.7
 
 repositories {
 	mavenCentral()
@@ -27,6 +27,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
-	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb-reactive
-	
+
+    implementation 'junit:junit:4.12'	
 }
