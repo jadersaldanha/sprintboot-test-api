@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: 
           name: Running integration tests
-          command: gradle bootRun
+          command: gradle test
 
 workflows:
   version: 2
