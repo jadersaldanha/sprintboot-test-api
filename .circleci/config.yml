@@ -11,14 +11,16 @@ jobs:
       - run:
           name: Decrpyt Secrets
           command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k $SECRETS_KEY
-      
-      - run:    
-          name: Cat
-          command: cat src/main/resources/application-prod.properties
 
       - run:
           name: Running Integration Tests
           command: gradle test
+
+      # Save test results for timing analysis
+      - store_test_results:
+          path: ~/sprintboot-test-api/test_results
+      - store_artifacts:
+          path: ~/sprintboot-test-api/test_results 
 
 workflows:
   version: 2
