@@ -6,6 +6,9 @@ jobs:
     working_directory: ~/sprintboot-test-api
     steps:
       - checkout
+      - run:
+        name: Decrypting Secrets
+        command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k $SECRETS_KEY
       - run: 
           name: Running integration tests
           command: gradle test
