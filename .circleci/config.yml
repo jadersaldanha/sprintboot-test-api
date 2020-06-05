@@ -16,11 +16,10 @@ jobs:
           name: Running Integration Tests
           command: gradle test
 
-      # Save test results for timing analysis
-      - store_test_results:
-          path: ~/sprintboot-test-api/test_results
       - store_artifacts:
-          path: ~/sprintboot-test-api/test_results 
+          path: ~/sprintboot-test-api/build/reports/tests/test
+
+          
 
 workflows:
   version: 2
