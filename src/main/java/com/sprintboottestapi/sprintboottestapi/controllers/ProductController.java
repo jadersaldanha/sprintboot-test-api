@@ -11,10 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sprintboottestapi.sprintboottestapi.models.Product;
 import com.sprintboottestapi.sprintboottestapi.repositories.ProductRepository;
 
-/**
- *
- * @author didin
- */
 @RestController
 public class ProductController {
     
