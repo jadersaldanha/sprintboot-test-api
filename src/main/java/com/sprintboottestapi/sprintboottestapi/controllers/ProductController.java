@@ -11,11 +11,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sprintboottestapi.sprintboottestapi.models.Product;
 import com.sprintboottestapi.sprintboottestapi.repositories.ProductRepository;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 public class ProductController {
     
     @Autowired
     ProductRepository productRepository;
+    
+    @ApiOperation(value = "Retorna uma lista de produtos")
+    @ApiResponses(value = {
+        @ApiResponse(code = 200, message = "Retorna a lista de produtos"),
+        @ApiResponse(code = 403, message = "Você não tem permissão para acessar este recurso"),
+    })
     
     @RequestMapping(method=RequestMethod.GET, value="/products")
     public Iterable<Product> product() {
