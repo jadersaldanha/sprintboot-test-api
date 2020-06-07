@@ -1,6 +1,3 @@
-[![CircleCI](https://circleci.com/gh/jadersaldanha/srintboot-test-api/tree/master.svg?style=svg)](https://circleci.com/gh/jadersaldanha/srintboot-test-api/tree/master)
-![Java CI](https://github.com/jadersaldanha/srintboot-test-api/workflows/Java%20CI/badge.svg?branch=master)
-
 # sprintboot-test-api
 
 Um repositorio exemplo utilizando as tecnologias Java, Spring Boot e MongoDB Cloud Atlas para criacao e testes integrados de uma API em Rest.
