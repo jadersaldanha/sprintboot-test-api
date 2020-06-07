@@ -10,7 +10,7 @@ jobs:
 
       - run:
           name: Decrpyt Secrets
-          command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k $SECRETS_KEY
+          command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application.properties.secrets -out src/main/resources/application.properties -k $SECRETS_KEY
 
       - run:
           name: Running Integration Tests
