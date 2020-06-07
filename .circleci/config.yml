@@ -8,9 +8,9 @@ jobs:
       # git pull
       - checkout
 
-      # - run:
-      #     name: Decrpyt Secrets
-      #     command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k $SECRETS_KEY
+      - run:
+          name: Decrpyt Secrets
+          command: openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k $SECRETS_KEY
 
       - run:
           name: Running Integration Tests
