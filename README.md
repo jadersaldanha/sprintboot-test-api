@@ -9,11 +9,17 @@ Para executar locamente:
 
 ## Testes
 
+Caso tenha o gradle instalado:
+
 $ git clone https://github.com/jadersaldanha/sprintboot-test-api
 
 $ cd sprintboot-test-api
 
 $ gradle test
+
+Caso nao tenha o gradle instalado:
+
+$ ./gradlew test
 
 ## Api
 
@@ -24,6 +30,10 @@ $ cd sprintboot-test-api
 $ openssl enc -d -aes-256-ecb -md md5 -in src/main/resources/application-prod.properties.secrets -out src/main/resources/application-prod.properties -k ASK_FOR_THE_SECRET
 
 $ gradle bootRun
+
+ou
+
+$ ./gradlew bootRun
 
 # Swagger
 

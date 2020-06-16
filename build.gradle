@@ -28,7 +28,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 
-    implementation 'junit:junit:4.12'	
+    implementation 'junit:junit:4.13'	
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
 	implementation 'org.projectlombok:lombok:1.18.10'
 	// https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
